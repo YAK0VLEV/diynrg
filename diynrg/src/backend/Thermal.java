@@ -10,7 +10,7 @@ public class Thermal extends Window {
 	/**
 	 * Cost for Thermal insulation per square foot.
 	 */
-	private float myItemCost = (float) 17.63;
+	private float myItemCost = (float) 17;
 	
 	/**
 	 * Insulation energy consumption is 0 for insulation.

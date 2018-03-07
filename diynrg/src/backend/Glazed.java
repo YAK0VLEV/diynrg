@@ -9,7 +9,7 @@ public class Glazed extends Window {
 	/**
 	 * Cost for Thermal insulation per square foot.
 	 */
-	private float myItemCost = (float) 24.15;
+	private float myItemCost = (float) 24;
 	
 	/**
 	 * Insulation energy consumption is 0 for insulation.

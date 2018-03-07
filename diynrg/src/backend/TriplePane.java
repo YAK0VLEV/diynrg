@@ -9,7 +9,7 @@ public class TriplePane extends Window {
 	/**
 	 * Cost for Thermal insulation per square foot.
 	 */
-	private float myItemCost = (float) 10.77;
+	private float myItemCost = (float) 10;
 	
 	/**
 	 * Insulation energy consumption is 0 for insulation.

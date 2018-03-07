@@ -10,7 +10,7 @@ public class GlassFiber extends Insulation {
 	/**
 	 * Cost for Glassfiber insulation per square foot.
 	 */
-	private float myItemCost = (float) 2.09;
+	private float myItemCost = (float) 3;
 	
 	/**
 	 * Insulation energy consumption is 0.

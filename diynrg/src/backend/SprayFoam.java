@@ -11,7 +11,7 @@ public class SprayFoam extends Insulation {
 	/**
 	 * Cost for SprayFoam insulation per square foot.
 	 */
-	private float myItemCost = (float) 1.22;
+	private float myItemCost = (float) 1;
 	
 	/**
 	 * Insulation energy consumption is 0 for insulation.

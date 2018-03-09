@@ -76,6 +76,7 @@ public class Intro {
 	float priceChoice3;
 	String replace = "xxxx";
 	boolean isNew = true;
+	//int userOption;
 	
 	/**
 	 * Launch the application.
@@ -271,7 +272,7 @@ public class Intro {
 
 		JFrame frame;
 		JFrame aboutFrame;
-		int userOption;
+		//int userOption;
 		LED LedOption = new LED(0);
 		CFL CflOption = new CFL(0);
 		Halogen hlgOption = new Halogen(0);
@@ -292,7 +293,9 @@ public class Intro {
 
 		public OptionPage(int op) {
 			
+			
 			userOption = op;
+			
 			initialize();
 		}
 		//public OptionPage(){ //back method
@@ -699,7 +702,7 @@ public class Intro {
 					
 				}
 			});
-			btnNext3.setBounds(322, 452, 89, 23);
+			btnNext3.setBounds(166, 452, 89, 23);
 			frame.getContentPane().add(btnNext3);
 			
 			
@@ -707,10 +710,10 @@ public class Intro {
 			btnBack2.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
-					//frame.setVisible(false);
-					//OptionPage back = new OptionPage();
-					//back.frame.setVisible(true);
-						
+					frame.setVisible(false);
+					OptionPage back = new OptionPage(userOption);
+					back.frame.setVisible(true);
+					System.out.println(userOption);
 					
 				}
 			});
@@ -738,7 +741,7 @@ public class Intro {
 				
 				}
 			});
-			btnHome.setBounds(166, 452, 89, 23);
+			btnHome.setBounds(322, 452, 89, 23);
 			frame.getContentPane().add(btnHome);
 			
 			JButton btnAbout = new JButton("?"); //about

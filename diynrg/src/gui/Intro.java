@@ -231,6 +231,13 @@ public class Intro {
 			frame.getContentPane().add(btnNext);
 			
 			JButton btnSavedProjects = new JButton("Saved Projects");
+			btnSavedProjects.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					SaveProject save = new SaveProject();
+					save.frame.setVisible(true);
+					
+				}
+			});
 			btnSavedProjects.setBounds(166, 364, 125, 23);
 			frame.getContentPane().add(btnSavedProjects);
 			
@@ -757,6 +764,11 @@ public class Intro {
 		}
 	}
 	
+	/**
+	 * Summary class, outputs all information about user selected items
+	 * 
+	 * @author Fasil Ayenew
+	 */
 	public class SummaryPage {
 
 		JFrame frame;
@@ -764,6 +776,7 @@ public class Intro {
 		int option;
 		Project myNewList;
 		String finale;
+		JButton btnNewButton;
 		public SummaryPage(Project myList) {
 			myNewList = myList;
 			initialize();
@@ -786,7 +799,8 @@ public class Intro {
 
 			JScrollPane scroll = new JScrollPane (textArea, 
 			   JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-
+			btnNewButton = new JButton("Save");
+			scroll.setColumnHeaderView(btnNewButton);
 			frame.add(scroll);
 			
 			
@@ -796,8 +810,34 @@ public class Intro {
 			
 		}
 	}
+	
+	/**
+	 * save class, saves the current project into a txt file
+	 * 
+	 * @author Fasil Ayenew
+	 */
+	public class SaveProject {
 
+		JFrame frame;
+		String finale;
+		public SaveProject() {
+			
+			initialize();
+		}
 
+		private void initialize() {
+			frame = new JFrame();
+			frame.setBounds(100, 100, 450, 549);
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setVisible (true);
+			
+			
+			/*JLabel lblNewLabel = new JLabel("test");
+			lblNewLabel.setBounds(188, 22, 46, 14);
+			frame.getContentPane().add(lblNewLabel);
+			*/
+		}
 
+	}
 
 }

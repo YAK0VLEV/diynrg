@@ -1,5 +1,9 @@
 package tests; 
 
+/**
+ * @author Kevin Nguyen
+ * Test class for the LED class.
+ */
 import static org.junit.Assert.*;
 
 import org.junit.Before;

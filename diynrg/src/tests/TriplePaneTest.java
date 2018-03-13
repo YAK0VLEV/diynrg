@@ -11,7 +11,8 @@ import org.junit.Test;
 import backend.TriplePane;
 
 /**
- * @author Kevin
+ * @author Kevin Nguyen
+ * Test class for Triple Pane class.
  *
  */
 public class TriplePaneTest {

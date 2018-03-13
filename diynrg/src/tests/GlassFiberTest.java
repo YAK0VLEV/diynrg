@@ -9,7 +9,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @author Kevin
+ * @author Kevin Nguyen
+ * Test class for Glass fiber.
  *
  */
 public class GlassFiberTest {

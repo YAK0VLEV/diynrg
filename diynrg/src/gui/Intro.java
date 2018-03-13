@@ -8,6 +8,8 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -792,7 +794,8 @@ public class Intro {
 			frame.setVisible (true);
 			textArea = new JTextArea ();
 			//textArea.setText();
-			textArea.setText(myNewList.showItems() + "total cost is : $" + String.valueOf(myNewList.getTotalCost()));
+			String report = myNewList.showItems() + "total cost is : $" + String.valueOf(myNewList.getTotalCost());
+			textArea.setText(report);
 			//textArea.setText(String.valueOf(myNewList.showItems()));
 			textArea.setEditable(false);
 			//gittestudsfhdiofgfdoighod
@@ -800,6 +803,20 @@ public class Intro {
 			JScrollPane scroll = new JScrollPane (textArea, 
 			   JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 			btnNewButton = new JButton("Save");
+			
+			btnNewButton.addActionListener(new ActionListener() {		// Kevin Nguyen
+				public void actionPerformed(ActionEvent e) {
+					try {
+						PrintWriter pw = new PrintWriter("diynrg_report.txt");
+						pw.println(report);
+						pw.close();
+					} catch (FileNotFoundException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					} 
+					
+				}
+			});
 			scroll.setColumnHeaderView(btnNewButton);
 			frame.add(scroll);
 			

@@ -11,7 +11,8 @@ import org.junit.Test;
 import backend.Thermal;
 
 /**
- * @author Kevin
+ * @author Kevin Nguyen
+ * Test class for Thermal.
  *
  */
 public class ThermalTest {

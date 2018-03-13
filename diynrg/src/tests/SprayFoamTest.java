@@ -11,48 +11,40 @@ import org.junit.Test;
 import backend.SprayFoam;
 
 /**
- * @author Kevin
+ * @author Kevin Nguyen
+ * Test class of Spray Foam Class.
  *
  */
 public class SprayFoamTest {
+	private SprayFoam mySf;
 
 	/**
 	 * @throws java.lang.Exception
 	 */
-	@Before
+	@Before 
 	public void setUp() throws Exception {
+		mySf = new SprayFoam(10, 10);
 	}
-
+	
 	/**
-	 * Test method for {@link backend.SprayFoam#SprayFoam(int, int)}.
+	 * Test method for {@link backend.SprayFoam#SprayFoam(int, int)}. 
 	 */
-	@Test
+	@Test (expected = IllegalArgumentException.class)
 	public final void testSprayFoam() {
-		fail("Not yet implemented");
+		new SprayFoam(-1, -1);
 	}
+	
 
 	/**
-	 * Test method for {@link backend.SprayFoam#getWorstedEnergyConsumption()}.
+	 * Test method for {@link backend.SprayFoam#GetSprayFoamEnergyConsumption()}.
 	 */
 	@Test
-	public final void testGetWorstedEnergyConsumption() {
-		fail("Not yet implemented");
+	public final void testGetSprayFoamEnergyConsumption() {
+		double realVal = 2.6939569;
+		double testVal = mySf.getSprayFoamEnergyConsumption();
+		
+		assertTrue(Math.abs(realVal - testVal ) < 1);
 	}
 
-	/**
-	 * Test method for {@link backend.SprayFoam#getEnergyConsumptionForQuantity()}.
-	 */
-	@Test
-	public final void testGetEnergyConsumptionForQuantity() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link backend.SprayFoam#getBaseEnergyConsumptionForQuantity()}.
-	 */
-	@Test
-	public final void testGetBaseEnergyConsumptionForQuantity() {
-		fail("Not yet implemented");
-	}
 
 }

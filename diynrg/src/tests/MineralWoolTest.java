@@ -11,7 +11,8 @@ import org.junit.Test;
 import backend.MineralWool;
 
 /**
- * @author Kevin
+ * @author Kevin Nguyen
+ * Test class for Mineral Wool.
  *
  */
 public class MineralWoolTest {
@@ -24,40 +25,17 @@ public class MineralWoolTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		myMw = new MineralWool(10, 100);
+		myMw = new MineralWool(10, 10);
+		notMw = new MineralWool(100, 100);
 		
 	}
 
 	/**
 	 * Test method for {@link backend.MineralWool#MineralWool(int, int)}.
 	 */
-	@Test
+	@Test (expected = IllegalArgumentException.class)
 	public final void testMineralWool() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link backend.MineralWool#name()}.
-	 */
-	@Test
-	public final void testName() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link backend.MineralWool#getMineralWoolcost()}.
-	 */
-	@Test
-	public final void testGetMineralWoolcost() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link backend.MineralWool#getPriceForQuantity()}.
-	 */
-	@Test
-	public final void testGetPriceForQuantity() {
-		fail("Not yet implemented");
+		new MineralWool(-1, 10);
 	}
 
 	/**
@@ -65,31 +43,22 @@ public class MineralWoolTest {
 	 */
 	@Test
 	public final void testGetMineralWoolEnergyConsumption() {
-		fail("Not yet implemented");
+		double realVal = 1.3005309;
+		double testVal = myMw.getMineralWoolEnergyConsumption();
+		System.out.println(testVal);
+		assertTrue(Math.abs(realVal - testVal) < 1);
 	}
 
-	/**
-	 * Test method for {@link backend.MineralWool#getWorstedEnergyConsumption()}.
-	 */
-	@Test
-	public final void testGetWorstedEnergyConsumption() {
-		fail("Not yet implemented");
-	}
 
 	/**
 	 * Test method for {@link backend.MineralWool#getEnergyConsumptionForQuantity()}.
 	 */
 	@Test
 	public final void testGetEnergyConsumptionForQuantity() {
-		fail("Not yet implemented");
+		double realVal = 1.3005309*24*10;
+		double testVal = myMw.getEnergyConsumptionForQuantity();
+		assertTrue(Math.abs(realVal - testVal) < 1);
 	}
 
-	/**
-	 * Test method for {@link backend.MineralWool#getBaseEnergyConsumptionForQuantity()}.
-	 */
-	@Test
-	public final void testGetBaseEnergyConsumptionForQuantity() {
-		fail("Not yet implemented");
-	}
 
 }

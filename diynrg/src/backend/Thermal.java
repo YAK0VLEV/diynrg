@@ -65,7 +65,7 @@ public class Thermal extends Window {
 	 */
 	@Override
 	public float getPriceForQuantity() {
-		return getThermalcost() * getQuantity();
+		return getThermalcost() * getQuantity() * getArea();
 	} 
 	
 	/**

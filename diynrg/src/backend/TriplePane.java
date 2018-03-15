@@ -64,7 +64,7 @@ public class TriplePane extends Window {
 		 */
 		@Override
 		public float getPriceForQuantity() {
-			return getTriplePanecost() * getQuantity();
+			return getTriplePanecost() * getQuantity() * getArea();
 		} 
 		
 		/**

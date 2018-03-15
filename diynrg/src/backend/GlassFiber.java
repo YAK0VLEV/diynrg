@@ -115,7 +115,7 @@ public class GlassFiber extends Insulation {
 	 */
 	@Override
 	public float getPriceForQuantity() {
-		return getGlassFibercost() * getQuantity();
+		return getGlassFibercost() * getQuantity() * getArea();
 	}
 
 	/**

@@ -66,10 +66,11 @@ public class CFL extends Bulb {
 	}
 	
 	/**
+	 * @author mike briden 3/2/18
 	 * The total Energy Consumption per day for 12 hours a day for a chosen number of 
 	 * the CFL type of items.
 	 * 
-	 * @return the number of watts lol
+	 * @return the number of watts
 	 */
 	@Override
 	public float getEnergyConsumptionForQuantity() {

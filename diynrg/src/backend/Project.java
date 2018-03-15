@@ -118,7 +118,7 @@ public class Project {
 	
 	/**
 	 * NEED a formula (Implemented User Story #2)
-	 * 
+	 * @author mike briden
 	 * @return saved per year for a given DIYproject
 	 */
 	public double savingPerYearForGivenDIYproject() {
@@ -127,7 +127,7 @@ public class Project {
 	
 	/**
 	 * NEED a formula (Implemented User Story #3)
-	 * 
+	 * @author mike Briden
 	 * @return estimated time for how long it will cost to �break even� in years
 	 */
 	public double estimationBreakEvenTime() {
@@ -135,15 +135,13 @@ public class Project {
 	}		
 
 	/**
+	 * @author mike briden
 	 * A method to test in text mode
 	 */
 	public String showItems() {
 		System.out.println(myItems.size());
 			StringBuilder s1 = new StringBuilder();
-		//	s1.append("My name is ");
-		//	s1.append(name + " ");
-			//s1.append("and I am ");
-			//s1.append(age + " years old.");
+			s1.append("Project Summary\n");
 		for (AbstractItem item : myItems) {
 			s1.append("Item : ");
 			s1.append(item.name());
@@ -153,13 +151,10 @@ public class Project {
 			s1.append(", Price for Item set : "); 
 			s1.append(item.getPriceForQuantity());
 			s1.append("\n");
-					//+ item.getPriceForQuantity())
-		//	System.out.print("Item : " + item.name());
-		//	System.out.print(", Quantity : " + item.getQuantity());
-		//	System.out.print(", Area : " + item.getArea());
-		//	System.out.println(", Price for Item set : " 
-		//								+ item.getPriceForQuantity());*/
 		}
+		s1.append("The time to break even (years): ");
+		s1.append(String.format("%.3f", estimationBreakEvenTime()));
+		s1.append("\n");
 		return s1.toString();
 	}
 }

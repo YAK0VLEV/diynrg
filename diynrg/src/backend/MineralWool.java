@@ -61,7 +61,7 @@ public class MineralWool extends Insulation {
 	 */
 	@Override
 	public float getPriceForQuantity() {
-		return getMineralWoolcost() * getQuantity();
+		return getMineralWoolcost() * getQuantity() * getArea();
 	}
 
 	/**

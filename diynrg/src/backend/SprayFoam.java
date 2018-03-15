@@ -63,7 +63,7 @@ public class SprayFoam extends Insulation {
 	 */
 	@Override
 	public float getPriceForQuantity() {
-		return getSprayFoamcost() * getQuantity();
+		return getSprayFoamcost() * getQuantity() * getArea();
 	}
 
 	/**

@@ -18,6 +18,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import backend.About;
 import backend.CFL;
 import backend.GlassFiber;
 import backend.Glazed;
@@ -231,18 +232,20 @@ public class Intro {
 			
 			btnNext.setBounds(322, 452, 89, 23);
 			frame.getContentPane().add(btnNext);
-			
+			/*
 			JButton btnSavedProjects = new JButton("Saved Projects");
 			btnSavedProjects.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					SaveProject save = new SaveProject();
-					save.frame.setVisible(true);
-					
+
 				}
 			});
 			btnSavedProjects.setBounds(166, 364, 125, 23);
 			frame.getContentPane().add(btnSavedProjects);
-			
+			*/
+			JLabel label1 = new JLabel("Be cheap: DIYnrg");
+			label.setFont(new Font("Arial", Font.BOLD, 16));
+			label1.setBounds(166, 364, 125, 23);
+			frame.getContentPane().add(label1);
 			//ImageIcon icon = new ImageIcon("diynrg.png");
 			JButton btnHome = new JButton("Home");
 			btnHome.addActionListener(new ActionListener() {
@@ -828,33 +831,66 @@ public class Intro {
 		}
 	}
 	
-	/**
-	 * save class, saves the current project into a txt file
-	 * 
-	 * @author Fasil Ayenew
-	 */
-	public class SaveProject {
+	public class AboutPage {
 
-		JFrame frame;
-		String finale;
-		public SaveProject() {
-			
+		JFrame aboutFrame;
+
+		public AboutPage() {
 			initialize();
 		}
 
+		/**
+		 * Initialize the contents of the frame.
+		 */
 		private void initialize() {
-			frame = new JFrame();
-			frame.setBounds(100, 100, 450, 549);
-			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			frame.setVisible (true);
+			aboutFrame = new JFrame();
+			
+			aboutFrame.setBounds(100, 100, 450, 549);
+			//aboutFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			aboutFrame.getContentPane().setLayout(null);
+			
+			About abt = new About();
+			JLabel lblAbout = new JLabel("About");
+			lblAbout.setBounds(139, 11, 46, 14);
+			aboutFrame.getContentPane().add(lblAbout);
+					
+			JLabel lblVersion = new JLabel("Version : " + abt.displayVersion());
+			lblVersion.setBounds(44, 115, 333, 14);
+			aboutFrame.getContentPane().add(lblVersion);
+				
+			JLabel lblDate = new JLabel("Date : " + abt.displayDate());
+			lblDate.setBounds(44, 172, 333, 14);
+			aboutFrame.getContentPane().add(lblDate);
+					
+			JLabel lblName1 = new JLabel("Dev 1 : " + abt.displayName1());
+			lblName1.setBounds(44, 229, 333, 14);
+			aboutFrame.getContentPane().add(lblName1);
+				
+			JLabel lblName2 = new JLabel("Dev 2 : " + abt.displayName2());
+			lblName2.setBounds(44, 289, 333, 14);
+			aboutFrame.getContentPane().add(lblName2);
+					
+			JLabel lblName3 = new JLabel("Dev 3 : " + abt.displayName3());
+			lblName3.setBounds(44, 343, 333, 14);
+			aboutFrame.getContentPane().add(lblName3);
+				
+			JLabel lblName4 = new JLabel("Dev 4 : " + abt.displayName4());
+			lblName4.setBounds(44, 400, 333, 14);
+			aboutFrame.getContentPane().add(lblName4);
+					
+			JLabel lblWebsite = new JLabel("Website : " + abt.displayWebsite());
+			lblWebsite.setBounds(44, 457, 340, 14);
+			aboutFrame.getContentPane().add(lblWebsite);
+					
+					
+			//aboutFrame.setVisible(true);
+					
 			
 			
-			/*JLabel lblNewLabel = new JLabel("test");
-			lblNewLabel.setBounds(188, 22, 46, 14);
-			frame.getContentPane().add(lblNewLabel);
-			*/
 		}
-
 	}
 
+
+	
+	
 }

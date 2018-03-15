@@ -106,7 +106,7 @@ public class Glazed extends Window {
 	 */
 	@Override
 	public float getPriceForQuantity() {
-		return getGlazedcost() * getQuantity();
+		return getGlazedcost() * getQuantity() * getArea();
 	}
 
 	/**

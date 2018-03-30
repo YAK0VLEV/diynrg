@@ -6,7 +6,7 @@ package backend;
  * @author Denis Yakovlev
  */
 public class BackEndTest {
-
+/*
 	public static void main(String[] args) {
 		   
 	      ProjectBuilder projectBuilder = new ProjectBuilder();
@@ -22,5 +22,5 @@ public class BackEndTest {
 	     
 	      System.out.println(testProject.savingPerYearForGivenDIYproject());
 	      System.out.println("Total Project Cost: " + testProject.getTotalCost());
-	   }
+	   }*/
 }

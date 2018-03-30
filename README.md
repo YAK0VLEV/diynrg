@@ -1,4 +1,4 @@
-Who We Are:
+### Who We Are:
 
 Hello! We are a team of students from the University of Washington Tacoma.
 
@@ -11,7 +11,7 @@ making DIY-ing around the house more organized, and manageable. It will also hel
 gauge the worth of a DIY, with statistical information.
 
 
-Who Can Benefit [Beware! Some functions have not implemented yet.]:
+### Who Can Benefit [Beware! Some functions have not implemented yet.]:
 
 Everyone. Although our software was initially intended for the pro-DIY-ers, our software
 can be a tool to help turn an amateur DIY to an expert.
